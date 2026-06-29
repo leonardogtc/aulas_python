@@ -13,8 +13,3 @@ for k, v in user_0.items():
     print("Value:" + v)
 
 print(user_0.items())
-
-
-
-
-
