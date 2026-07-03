@@ -8,6 +8,12 @@
 # informações sobre um usuário, mas não tem certeza quanto ao tipo de
 # informação que receberá.
 
+
+# Os asteriscos duplos antes do parâmetro **user_info fazem
+# Python criar um dicionário vazio chamado user_info e colocar quaisquer
+# pares nome-valor recebidos nesse dicionário.
+
+
 def criar_perfil(primeiro, ultimo, **user_info):
     """ Constrói um dicionário contendo tudo oque sabemos sobre um usuário. """
     profile = {}

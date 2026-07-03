@@ -10,7 +10,7 @@ da função.
 def pizza(tamanho, *coberturas):
     """ Apresenta a pizza que estamos prestes a preparar! """
     print(f"\nFazendo uma pizza {tamanho}.")
-    print(f"Com as seguintes coberturas:")
+    print("Com as seguintes coberturas:")
     for cobertura in coberturas:
         print(f" - {cobertura.title()}")
 
