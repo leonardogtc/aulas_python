@@ -1,4 +1,12 @@
-'''
+# ==============================================================================
+# EXERCÍCIOS E DESAFIOS (3.4 a 3.7)
+# Este arquivo contém desafios sobre gerenciamento de listas:
+# inserção (.insert e .append), alteração de valores por índice,
+# remoção (del e .pop) e controle dinâmico da lista.
+# Escreva suas soluções abaixo dos enunciados!
+# ==============================================================================
+
+"""
 Os exercícios a seguir são um pouco mais complexos que aqueles do Capítulo 2,
 porém darão a você a oportunidade de usar listas de todas as formas descritas.
 
@@ -45,4 +53,5 @@ lista, permitindo que elas saibam que ainda estão convidadas.
 • Utilize del para remover os dois últimos nomes de sua lista, de modo que você
 tenha uma lista vazia. Mostre sua lista para garantir que você realmente tem
 uma lista vazia no final de seu programa.
-'''
+"""
+

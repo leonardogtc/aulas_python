@@ -1,3 +1,10 @@
+# ==============================================================================
+# EXERCÍCIOS E DESAFIOS (3.1 a 3.3)
+# Este arquivo contém propostas de exercícios para praticar o acesso a elementos
+# de uma lista, personalização de mensagens e criação de listas personalizadas.
+# Tente resolver escrevendo seu código abaixo de cada enunciado!
+# ==============================================================================
+
 """
 3.1 – Nomes: Armazene os nomes de alguns de seus amigos em uma lista
 chamada names. Exiba o nome de cada pessoa acessando cada elemento da
@@ -12,5 +19,5 @@ personalizada com o nome da pessoa.
 motocicleta ou carro, e crie uma lista que armazene vários exemplos. Utilize
 sua lista para exibir uma série de frases sobre esses itens, como “Gostaria
 de ter uma moto Honda”.
-
 """
+

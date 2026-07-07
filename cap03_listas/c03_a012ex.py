@@ -1,5 +1,12 @@
+# ==============================================================================
+# EXERCÍCIOS E DESAFIOS (3.8 a 3.11)
+# Este arquivo contém desafios avançados sobre ordenação de listas (.sort, sorted, .reverse),
+# obtenção de tamanho de lista (len) e tratamento de erros comuns (erros de índice).
+# Escreva suas soluções abaixo dos enunciados!
+# ==============================================================================
+
 # pyrefly: ignore [parse-error]
-'''
+"""
 3.8 – Conhecendo o mundo: Pense em pelo menos cinco lugares do mundo que
 você gostaria de visitar.
 • Armazene as localidades em uma lista. Certifique-se de que a lista não esteja em
@@ -28,11 +35,11 @@ informando o número de pessoas que você está convidando para o jantar.
 3.10 – Todas as funções: Pensa em algo que você poderia armazenar em uma
 lista. Por exemplo, você poderia criar uma lista de montanhas, rios, países,
 cidades, idiomas ou qualquer outro item que quiser. Escreva um programa que crie
-uma lista contendo esses itens e então utilize cada função apresentada neste
+lista contendo esses itens e então utilize cada função apresentada neste
 capítulo pelo menos uma vez.
 
 3.11 – Erro proposital: Se você ainda não recebeu um erro de índice em um de
 seus programas, tente fazer um erro desse tipo acontecer. Altere um índice em um
 de seus programas de modo a gerar um erro de índice. Não se esqueça de corrigir
 o erro antes de fechar o programa.
-'''
+"""
