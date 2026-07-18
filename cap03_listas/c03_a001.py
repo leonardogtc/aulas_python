@@ -4,6 +4,15 @@
 # criar listas e tuplas em Python.
 # ==========================================
 
+"""
+Definição de Lista em Python:
+Uma lista é uma estrutura de dados que armazena uma coleção ordenada e mutável de itens.
+- Ordenada: Os itens têm uma ordem definida que não muda (a menos que seja explicitamente modificada).
+- Mutável: Podemos adicionar, remover ou alterar elementos após a criação da lista.
+- Tipos mistos: Uma lista pode conter diferentes tipos de dados (strings, inteiros, outras listas, etc.).
+- Delimitada por colchetes `[]` com elementos separados por vírgulas `,`.
+"""
+
 # 1. Criando uma lista vazia usando colchetes []
 # Esta é a forma mais comum e recomendada de criar uma lista vazia em Python.
 motocicletas = []
