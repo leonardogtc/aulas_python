@@ -30,6 +30,13 @@ class Car:
         else:
             print("Você não pode reverter a quilometragem!")
 
+    def increment_odometer(self, mileage):
+        """ Adiciona a milhagem ao valor atual """
+        if mileage >= 0:
+            self.odometer_reading += mileage
+        else:
+            print("Você não pode reverter a quilometragem!")
+
 
 my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
@@ -38,7 +45,10 @@ print(my_new_car.get_descriptive_name())
 my_new_car.odometer_reading = 23
 
 # Moficiando por meio de um método
-my_new_car.update_odometer(42)
+my_new_car.update_odometer(23500)
+
+# Adicionando milhagem ao valor atual
+my_new_car.increment_odometer(100)
 
 # Mostrando o valor do atributo
 my_new_car.read_odometer()
