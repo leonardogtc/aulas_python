@@ -2,6 +2,8 @@
 Trabalhando com instâncias da classe
 ------------------------------------
 """
+
+
 class Car:
     """ Uma tentativa simples de representar um carro! """
 
@@ -10,11 +12,18 @@ class Car:
         self.make = make
         self.model = model
         self.year = year
+        self.odometer_reading = 0
 
     def get_descriptive_name(self):
         """ Devolve um nome descritivo de maneira elegante """
         long_name = f"{self.year} {self.make} {self.model}"
         return long_name.title()
 
+    def read_odometer(self):
+        """ Exibe a quilometragem do carro """
+        print(f"Este carro tem {self.odometer_reading} milhas.")
+
+
 my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
+my_new_car.read_odometer()
