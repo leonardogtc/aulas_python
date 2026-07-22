@@ -23,11 +23,23 @@ class Car:
         """ Exibe a quilometragem do carro """
         print(f"Este carro tem {self.odometer_reading} milhas.")
 
+    def update_odometer(self, mileage):
+        """ Atualiza a quilometragem """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("Você não pode reverter a quilometragem!")
+
 
 my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
 
 # Modificando o valor do atributo
 my_new_car.odometer_reading = 23
+
+# Moficiando por meio de um método
+my_new_car.update_odometer(42)
+
+# Mostrando o valor do atributo
 my_new_car.read_odometer()
 
