@@ -1,6 +1,5 @@
 # Operador Módulo (retorna o resto da divisão entre dois números)
-prompt = "Entre um número inteiro e te direi se é par ou impar!"
-prompt += "\nDigite o número desejado: "
+prompt = "Entre um número inteiro e te direi se é par ou impar!\nDigite o número desejado: "
 
 numero = int(input(prompt))
 
