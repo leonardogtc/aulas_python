@@ -33,10 +33,16 @@ class CarroEletrico(Carro):
     def __init__(self, marca, modelo, ano):
         """Inicializa os atributos da classe-pai."""
         super().__init__(marca, modelo, ano)
+        self.bateria = 40
+
+    def describe_battery(self):
+        """Imprime uma informação sobre o tamanho da bateria."""
+        print(f"Este carro tem uma bateria de {self.bateria} kWh.")
 
 
 meu_tesla = CarroEletrico('tesla', 'model 3', 2020)
 print(meu_tesla.get_descriptive_name())
+meu_tesla.describe_battery()
 
 # pyrefly: ignore [parse-error]
 """
