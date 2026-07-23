@@ -39,10 +39,15 @@ class CarroEletrico(Carro):
         """Imprime uma informação sobre o tamanho da bateria."""
         print(f"Este carro tem uma bateria de {self.bateria} kWh.")
 
+    def fill_gas_tank(self):
+        """Um carro elétrico não precisa de tanque de gasolina."""
+        print("Este carro não tem tanque de gasolina!")
+
 
 meu_tesla = CarroEletrico('tesla', 'model 3', 2020)
 print(meu_tesla.get_descriptive_name())
 meu_tesla.describe_battery()
+meu_tesla.fill_gas_tank()
 
 # pyrefly: ignore [parse-error]
 """
