@@ -26,6 +26,26 @@ class Carro():
         long_name = f"{self.ano} {self.marca} {self.modelo}"
         return long_name.title()
 
+class Bateria():
+    """ Uma tentativa simples de modelar uma bateria para um carro elétrico """
+    def __init__(self, tamanho_bateria=40):
+        """Inicializa os atributos da bateria."""
+        self.tamanho_bateria = tamanho_bateria
+        self.nivel_bateria = 100
+
+    def describe_battery(self):
+        """Imprime uma informação sobre o tamanho da bateria."""
+        print(f"Este carro tem uma bateria de {self.tamanho_bateria} kWh.")
+
+    def get_range(self):
+        """Imprime a autonomia da bateria."""
+        if self.nivel_bateria == 100:
+            print("Este carro tem autonomia para 500km.")
+        else:
+            print(f"Este carro tem autonomia para {self.nivel_bateria}km.")
+
+        
+
 
 class CarroEletrico(Carro):
     """Um modelo de carro elétrico que representa um carro em especial."""
@@ -33,7 +53,7 @@ class CarroEletrico(Carro):
     def __init__(self, marca, modelo, ano):
         """Inicializa os atributos da classe-pai."""
         super().__init__(marca, modelo, ano)
-        self.bateria = 40
+        self.bateria = Bateria()
 
     def describe_battery(self):
         """Imprime uma informação sobre o tamanho da bateria."""
@@ -48,6 +68,7 @@ meu_tesla = CarroEletrico('tesla', 'model 3', 2020)
 print(meu_tesla.get_descriptive_name())
 meu_tesla.describe_battery()
 meu_tesla.fill_gas_tank()
+meu_tesla.bateria.describe_battery()
 
 # pyrefly: ignore [parse-error]
 """
