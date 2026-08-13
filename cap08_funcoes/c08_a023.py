@@ -1,35 +1,28 @@
-# Armazenando suas funções em módulos
-# -------------------------------------
-# Uma vantagem das funções é a maneira como elas separam blocos de
-# código de seu programa principal. Ao usar nomes descritivos para suas
-# funções, será bem mais fácil entender o seu programa principal. Você pode
-# dar um passo além armazenando suas funções em um arquivo separado
-# chamado módulo e, então, importar esse módulo em seu programa
-# principal. Uma instrução import diz a Python para deixar o código de um
-# módulo disponível no arquivo de programa em execução no momento.
-# Armazenar suas funções em um arquivo separado permite ocultar os
-# detalhes do código de seu programa e se concentrar na lógica de nível mais
-# alto. Também permite reutilizar funções em muitos programas diferentes.
-# Quando armazenamos funções em arquivos separados, podemos
-# compartilhar esses arquivos com outros programadores sem a necessidade
-# de compartilhar o programa todo. Saber como importar funções também
-# possibilita usar bibliotecas de funções que outros programadores
-# escreveram.
-# Há várias maneiras de importar um módulo e vou mostrar cada uma
-# delas rapidamente.
+# CONCEITO: Módulos e Importação de Funções (import)
+# ----------------------------------------------------
+# Um módulo é simplesmente um arquivo com extensão .py contendo funções e definições.
+# Ao importar módulos em seu programa principal, você pode reutilizar códigos de outros arquivos
+# mantendo seu script principal limpo e legível.
 
-from c08_a020 import pizza  # Importando uma função específica de um módulo
-from c08_a019 import fazer_pizza  # Importando apenas a função necessária
+# Forma 1: Importando uma função específica de outro arquivo/módulo usando `from modulo import funcao`
+from c08_a020 import pizza  # Importa apenas a função 'pizza' definida no arquivo c08_a020.py
 
-# Criar um alias para importar o módulo com um nome mais curto
-import c08_a021 as perfil
+# Forma 2: Importando outra função de outro módulo
+from c08_a019 import fazer_pizza  # Importa a função 'fazer_pizza' de c08_a019.py
+
+# Forma 3: Importando um módulo inteiro e atribuindo um ALIAS (apelido) com `as`
+import c08_a021 as perfil  # Permite acessar funções do c08_a021 usando a sintaxe 'perfil.nome_funcao()'
 
 
-pizza('familía', 'cogumelos', 'pimentões verdes', 'queijo extra')
+# --- EXECUTANDO AS FUNÇÕES IMPORTADAS ---
 
+# Usando a função 'pizza' importada diretamente de c08_a020
+pizza('família', 'cogumelos', 'pimentões verdes', 'queijo extra')
+
+# Usando a função 'criar_perfil' através do alias do módulo 'perfil' (c08_a021)
 user_profile = perfil.criar_perfil(
     'albert', 'einstein', location='princeton', field='physics')
-
 print(user_profile)
 
+# Usando a função 'fazer_pizza' importada de c08_a019
 fazer_pizza('cogumelos', 'pimentões verdes', 'queijo extra')

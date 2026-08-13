@@ -1,52 +1,41 @@
-'''
-Evitando que uma função modifique uma lista
--------------------------------------------
-Às vezes, você vai querer evitar que uma função modifique uma lista.
+# CONCEITO: Preservando a Lista Original Enviando uma Cópia [:]
+# -----------------------------------------------------------
+# Para evitar que uma função altere a lista original, podemos passar uma CÓPIA em vez da lista original.
+# Usamos a notação de fatiamento `lista[:]` que gera uma cópia superficial (shallow copy) da lista.
 
-Você pode enviar uma cópia de uma lista para uma função assim:
-
-nome_da_função(nome_da_lista[:])
-
-A notação de fatia [:] cria uma cópia da lista para ser enviada à função.
-
-'''
-
+# Função 1: Altera a lista que recebe no primeiro parâmetro
 def print_models(unprinted_designs, completed_models):
     """
-    Simula a impressão de cada design, até que não haja mais nenhum.
-    Transfere cada design para completed_models após a impressão.
+    Simula a impressão de cada design, transferindo de unprinted_designs para completed_models.
     """
-    # Loop continua enquanto houver itens na lista de designs pendentes (unprinted_designs)
     while unprinted_designs:
-        # Remove o último item da lista unprinted_designs (LIFO - Last In, First Out)
         current_design = unprinted_designs.pop()
-
-        # Simula a criação de uma impressão 3D a partir do design
         print("Printing model: " + current_design)
-        
-        # Adiciona o design que acabou de ser impresso à lista de modelos concluídos
         completed_models.append(current_design)
 
 
+# Função 2: Exibe os modelos concluídos
 def show_completed_models(completed_models):
     """Mostra todos os modelos impressos."""
     print("\nThe following models have been printed:")
-    # Percorre a lista de modelos concluídos e exibe cada um deles
     for completed_model in completed_models:
         print(completed_model)
 
 
-# Lista inicial contendo os designs que precisam ser impressos
+# --- CÓDIGO PRINCIPAL ---
+
+# Lista original de designs
 unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
 
-# Lista vazia que será preenchida com os modelos conforme forem impressos
+# Lista vazia para modelos impressos
 completed_models = []
 
-# Executa a função para simular a impressão dos designs
+# PONTO CHAVE: Passamos 'unprinted_designs[:]' (uma cópia).
+# A função 'print_models' vai esvaziar a CÓPIA, mas a lista original 'unprinted_designs' permanecerá intacta!
 print_models(unprinted_designs[:], completed_models)
 
-# Lista continua a mesma - foi feita alteração em uma cópia
-print(unprinted_designs)
+# Exibimos a lista original no terminal para comprovar que seus itens NÃO foram removidos
+print("\nLista original preservada:", unprinted_designs)
 
-# Executa a função para exibir a lista final de modelos impressos
+# Exibimos os modelos concluídos acumulados na lista completed_models
 show_completed_models(completed_models)
