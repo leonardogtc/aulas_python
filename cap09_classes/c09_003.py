@@ -26,8 +26,10 @@ class Carro():
         long_name = f"{self.ano} {self.marca} {self.modelo}"
         return long_name.title()
 
+
 class Bateria():
     """ Uma tentativa simples de modelar uma bateria para um carro elétrico """
+
     def __init__(self, tamanho_bateria=40):
         """Inicializa os atributos da bateria."""
         self.tamanho_bateria = tamanho_bateria
@@ -43,8 +45,6 @@ class Bateria():
             print("Este carro tem autonomia para 500km.")
         else:
             print(f"Este carro tem autonomia para {self.nivel_bateria}km.")
-
-        
 
 
 class CarroEletrico(Carro):

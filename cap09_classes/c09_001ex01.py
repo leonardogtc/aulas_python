@@ -1,5 +1,5 @@
 """
-9.1 – Restaurante: 
+9.1 – Restaurante:
 
 1. Crie uma classe chamada Restaurant. O método __init__() de Restaurant deve
 armazenar dois atributos: restaurant_name e cuisine_type.
@@ -29,6 +29,7 @@ class Restaurante():
     def open_restaurant(self):
         """Exibe uma mensagem informando que o restaurante está aberto."""
         print(f"O restaurante {self.nome} está aberto!")
+
 
 # Instanciando a classe Restaurante
 restaurante = Restaurante('Fogo de Chão', 'Brasileiro')

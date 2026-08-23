@@ -52,4 +52,3 @@ my_new_car.increment_odometer(100)
 
 # Mostrando o valor do atributo
 my_new_car.read_odometer()
-

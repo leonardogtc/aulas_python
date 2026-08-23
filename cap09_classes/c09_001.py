@@ -2,19 +2,25 @@
 Criando e usando uma classe
 ---------------------------
 Uma classe é composta por 'atributos' e 'métodos' em que se define:
-- atributo: são as características ou dados que descrevem os objetos criados a partir da classe (ex: nome, cor, tamanho).
-- método: são as funções/ações que os objetos da classe podem executar (ex: falar, andar, calcular).
+- atributo: são as características ou dados que descrevem os objetos criados a
+partir da classe (ex: nome, cor, tamanho).
+- método: são as funções/ações que os objetos da classe podem executar (ex:
+falar, andar, calcular).
 """
 
-# Por convenção, nomes com a primeira letra maiúscula referem-se a classes em Python
+# Por convenção, nomes com a primeira letra maiúscula referem-se a classes em
+# Python
 
 
 class Cachorro():
     """ Uma tentativa simples de modelar um cachorro. """
 
-    # O método __init__() é chamado automaticamente sempre que criamos uma nova instância (objeto).
-    # O primeiro parâmetro deste método é self, que é uma referência à própria instância.
-    # Os parâmetros seguintes são os atributos que serão definidos na instância.
+    # O método __init__() é chamado automaticamente sempre que criamos uma nova
+    # instância (objeto).
+    # O primeiro parâmetro deste método é self, que é uma referência à própria
+    # instância.
+    # Os parâmetros seguintes são os atributos que serão definidos na
+    # instância.
     # Em: def __init__(self, nome, idade):
     # self, nome e idade são os parâmetros que serão definidos na instância
     def __init__(self, nome, idade):
@@ -23,20 +29,28 @@ class Cachorro():
         self.idade = idade              # Atributo idade
         self.cor = ""                   # Atributo cor
 
-    # O método sentar() é um método da classe Cachorro. Ele não é chamado automaticamente.
-    # Ele é chamado quando criamos uma instância da classe Cachorro e chamamos o método sentar() nela.
-    # Note que o primeiro parâmetro deste método é self, que é uma referência à própria instância.
-    # Isso significa que o método sentar() tem acesso aos atributos da instância.
+    # O método sentar() é um método da classe Cachorro. Ele não é chamado
+    # automaticamente.
+    # Ele é chamado quando criamos uma instância da classe Cachorro e chamamos
+    # o método sentar() nela.
+    # Note que o primeiro parâmetro deste método é self, que é uma referência
+    # à própria instância.
+    # Isso significa que o método sentar() tem acesso aos atributos da
+    # instância.
     # Em: def sentar(self):
     # self é o parâmetro que será definido na instância
     def sentar(self):
         """ Simula um cachorro sentando em resposta a um comando. """
         print(f"{self.nome} está sentado agora!")
 
-    # O método rolar() é um método da classe Cachorro. Ele não é chamado automaticamente.
-    # Ele é chamado quando criamos uma instância da classe Cachorro e chamamos o método rolar() nela.
-    # Note que o primeiro parâmetro deste método é self, que é uma referência à própria instância.
-    # Isso significa que o método rolar() tem acesso aos atributos da instância.
+    # O método rolar() é um método da classe Cachorro. Ele não é chamado
+    # automaticamente.
+    # Ele é chamado quando criamos uma instância da classe Cachorro e chamamos
+    # o método rolar() nela.
+    # Note que o primeiro parâmetro deste método é self, que é uma referência
+    # à própria instância.
+    # Isso significa que o método rolar() tem acesso aos atributos da
+    # instância.
     # Em: def rolar(self):
     # self é o parâmetro que será definido na instância
     def rolar(self):
